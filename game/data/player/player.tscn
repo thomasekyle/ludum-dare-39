@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://data/player/player.gd" type="Script" id=1]
 [ext_resource path="res://data/player/era.png" type="Texture" id=2]
+[ext_resource path="res://data/overlays/shadow_overlay.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -41,5 +42,7 @@ transform/scale = Vector2( 0.662688, 1.0634 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
+
+[node name="shadow_overlay" parent="." instance=ExtResource( 3 )]
 
 

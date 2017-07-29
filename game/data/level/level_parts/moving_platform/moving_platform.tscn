@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=1]
 
-[ext_resource path="res://data/level/level_parts/still_platform/still_platform.gd" type="Script" id=1]
+[ext_resource path="res://data/level/level_parts/moving_platform/moving_platform.gd" type="Script" id=1]
 [ext_resource path="res://data/level/level_parts/still_platform/still_platform.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="still_platform" type="StaticBody2D"]
+[node name="moving_platform" type="KinematicBody2D"]
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
@@ -16,17 +16,22 @@ shapes/0/transform = Matrix32( 1.59478, 0, 0, 0.799394, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
+collision/margin = 0.08
 script/script = ExtResource( 1 )
+horz_m = true
+horz_way = 0
+horz_range = 200
+vert_m = false
+vert_way = 0
+vert_range = 150
+falling = true
+SPEED = 100
 
-[node name="spr_still_platform" type="Sprite" parent="."]
+[node name="spr_moving_platform" type="Sprite" parent="."]
 
 texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="col_moving_platform" type="CollisionShape2D" parent="."]
 
 transform/scale = Vector2( 1.59478, 0.799394 )
 shape = SubResource( 1 )

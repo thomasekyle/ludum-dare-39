@@ -17,19 +17,27 @@ var input_direction=0
 var direction=0
 var flip=false
 var falling=true
-var can_jump=1
-
+var jumps=2
+var moving=false
 var move_remainder
+var shadow = 0.1
 
 func _ready():
 	set_process(true)
 	set_process_input(true)
 
 func _input(event):
-	if (Input.is_action_pressed("ui_accept")):
+	if (event != null):
+		moving=true
+	else:
+		moving=false
+	if (Input.is_action_pressed("ui_accept") and jumps > 0):
 		speed_y = -JUMP_FORCE
+		jumps-=1
 
 func _process(delta):
+	
+		
 	if input_direction:
 		direction = input_direction
 	
@@ -55,13 +63,37 @@ func _process(delta):
 	speed_y += grav * delta
 	
 	velocity.x = speed_x * delta * direction
-	print(velocity.x)
 	velocity.y = speed_y * delta
 	move_remainder = move(velocity)
 	
+       
+	
 	if is_colliding():
 		var normal = get_collision_normal()
+		if normal.y < 0:
+			jumps = 2
+			grav = 0
 		var slide = normal.slide(move_remainder)
 		speed_y = normal.slide(Vector2(0, speed_y))
 		speed_y = 0
-		move(slide)
+		var obj = get_collider()
+		var add_vel = get_col_vel(obj)
+		print(get_collider_velocity())
+		print(add_vel)
+		if moving:
+			move(slide)
+		else:
+			move(add_vel)
+	else:
+		grav = 1700
+			
+		
+func get_col_vel(o):
+	var cols = get_parent().get_node("Platforms").get_children()
+	for i in cols:
+		if (i.get_instance_ID() == o.get_instance_ID()):
+			print(true)
+			print (i.get_velocity())
+			return i.get_velocity()
+			
+			

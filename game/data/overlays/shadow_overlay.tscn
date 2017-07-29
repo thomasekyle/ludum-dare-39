@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://data/overlays/shadow.png" type="Texture" id=1]
+
+[node name="shadow_overlay" type="Node2D"]
+
+visibility/opacity = 0.1
+z/z = 5
+
+[node name="spr_overlay" type="Sprite" parent="."]
+
+transform/pos = Vector2( -3.53628, 0.718872 )
+transform/scale = Vector2( 4.70157, 4.56517 )
+texture = ExtResource( 1 )
+
+
