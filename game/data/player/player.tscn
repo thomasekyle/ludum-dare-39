@@ -46,7 +46,7 @@ script/script = ExtResource( 1 )
 
 frames = SubResource( 2 )
 animation = "moving"
-frame = 3
+frame = 2
 playing = true
 centered = false
 

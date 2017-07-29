@@ -17,7 +17,7 @@ var input_direction=0
 var direction=0
 var flip=false
 var falling=true
-var jumps=2
+var jumps=1
 var moving=false
 var move_remainder
 var shadow = 0.1
@@ -64,7 +64,7 @@ func _process(delta):
 		
 	#Add Gravity
 	speed_y += grav * delta
-	if jumps < 2:
+	if jumps < 1:
 		get_node("anim_player").set_animation("jumping")
 	
 	
@@ -77,7 +77,7 @@ func _process(delta):
 	if is_colliding():
 		var normal = get_collision_normal()
 		if normal.y < 0:
-			jumps = 2
+			jumps = 1
 			grav = 0
 		var slide = normal.slide(move_remainder)
 		speed_y = normal.slide(Vector2(0, speed_y))

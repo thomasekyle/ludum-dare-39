@@ -1,85 +1,18 @@
 [gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://data/level/test_level/test_level.gd" type="Script" id=1]
-[ext_resource path="res://data/level/level_parts/checkpoint/checkpoint.tscn" type="PackedScene" id=2]
-[ext_resource path="res://data/enemy/ghost.tscn" type="PackedScene" id=3]
-[ext_resource path="res://data/level/level_parts/still_platform/still_platform.tscn" type="PackedScene" id=4]
-[ext_resource path="res://data/level/level_parts/moving_platform/moving_platform.tscn" type="PackedScene" id=5]
-[ext_resource path="res://data/player/player.tscn" type="PackedScene" id=6]
-[ext_resource path="res://data/ui/ui.tscn" type="PackedScene" id=7]
+[ext_resource path="res://data/player/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://data/ui/ui.tscn" type="PackedScene" id=3]
+[ext_resource path="res://data/level/level_parts/checkpoint/checkpoint.tscn" type="PackedScene" id=4]
+[ext_resource path="res://data/enemy/ghost.tscn" type="PackedScene" id=5]
+[ext_resource path="res://data/level/level_parts/still_platform/still_platform.tscn" type="PackedScene" id=6]
+[ext_resource path="res://data/level/level_parts/moving_platform/moving_platform.tscn" type="PackedScene" id=7]
 
 [node name="test_level" type="Node2D"]
 
 script/script = ExtResource( 1 )
 
-[node name="Checkpoints" type="Node" parent="."]
-
-editor/display_folded = true
-
-[node name="checkpoint1" parent="Checkpoints" instance=ExtResource( 2 )]
-
-transform/pos = Vector2( 392.161, 397.919 )
-transform/scale = Vector2( 2.53443, 2.32571 )
-checkpoint_num = 1
-
-[node name="checkpoint2" parent="Checkpoints" instance=ExtResource( 2 )]
-
-transform/pos = Vector2( 719.277, 364.184 )
-transform/scale = Vector2( 2.53443, 2.32571 )
-checkpoint_num = 2
-
-[node name="Enemies" type="Node" parent="."]
-
-[node name="ghost" parent="Enemies" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 77.3084, 150.727 )
-transform/scale = Vector2( 2.55126, 2.54698 )
-
-[node name="Platforms" type="Node" parent="."]
-
-editor/display_folded = true
-
-[node name="still_platform" parent="Platforms" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 65.2618, 454.976 )
-transform/scale = Vector2( 4.11224, 1 )
-
-[node name="still_platform1" parent="Platforms" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 218.42, 461.976 )
-transform/scale = Vector2( 4.11224, 1 )
-
-[node name="still_platform2" parent="Platforms" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 562.75, 430.791 )
-transform/scale = Vector2( 4.11224, 1 )
-
-[node name="still_platform3" parent="Platforms" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 387.236, 444.97 )
-transform/scale = Vector2( 4.11224, 1 )
-
-[node name="still_platform4" parent="Platforms" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 734.495, 405.306 )
-transform/scale = Vector2( 4.11224, 1 )
-
-[node name="still_platform6" parent="Platforms" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 1087.13, 165.109 )
-transform/scale = Vector2( 4.11224, 1 )
-
-[node name="moving_platform" parent="Platforms" instance=ExtResource( 5 )]
-
-transform/pos = Vector2( 878.061, 263.776 )
-transform/scale = Vector2( 4.06779, 1.25236 )
-horz_m = false
-vert_m = true
-vert_range = 300
-
-[node name="Misc" type="Node" parent="."]
-
-[node name="player" parent="." instance=ExtResource( 6 )]
+[node name="player" parent="." instance=ExtResource( 2 )]
 
 editor/display_folded = true
 transform/pos = Vector2( 66.1547, 405.509 )
@@ -105,9 +38,74 @@ drag_margin/top = 0.2
 drag_margin/right = 0.2
 drag_margin/bottom = 0.2
 
-[node name="ui" parent="player" instance=ExtResource( 7 )]
+[node name="ui" parent="player" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( -297.293, -217.124 )
+
+[node name="Checkpoints" type="Node" parent="."]
+
+editor/display_folded = true
+
+[node name="checkpoint1" parent="Checkpoints" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 392.161, 397.919 )
+transform/scale = Vector2( 2.53443, 2.32571 )
+checkpoint_num = 1
+
+[node name="checkpoint2" parent="Checkpoints" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 719.277, 364.184 )
+transform/scale = Vector2( 2.53443, 2.32571 )
+checkpoint_num = 2
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="ghost" parent="Enemies" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 83.6911, -84.1945 )
+transform/scale = Vector2( 1.574, 1.91027 )
+
+[node name="Platforms" type="Node" parent="."]
+
+[node name="still_platform" parent="Platforms" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 65.2618, 454.976 )
+transform/scale = Vector2( 4.11224, 1 )
+
+[node name="still_platform1" parent="Platforms" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 218.42, 461.976 )
+transform/scale = Vector2( 4.11224, 1 )
+
+[node name="still_platform2" parent="Platforms" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 562.75, 430.791 )
+transform/scale = Vector2( 4.11224, 1 )
+
+[node name="still_platform3" parent="Platforms" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 387.236, 444.97 )
+transform/scale = Vector2( 4.11224, 1 )
+
+[node name="still_platform4" parent="Platforms" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 734.495, 405.306 )
+transform/scale = Vector2( 4.11224, 1 )
+
+[node name="still_platform6" parent="Platforms" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 1087.13, 165.109 )
+transform/scale = Vector2( 4.11224, 1 )
+
+[node name="moving_platform" parent="Platforms" instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 878.061, 263.776 )
+transform/scale = Vector2( 4.06779, 1.25236 )
+horz_m = false
+vert_m = true
+vert_range = 300
+
+[node name="Misc" type="Node" parent="."]
 
 [connection signal="area_enter" from="Checkpoints/checkpoint1" to="." method="_on_a2d_checkpoint_area_enter"]
 

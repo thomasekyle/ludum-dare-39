@@ -26,7 +26,7 @@ func _process(delta):
 	if shadow_timer > .25 :
 		shadow_timer = 0
 		var opc = get_node("player/shadow_overlay").get_opacity() + 0.01
-		var light_length = get_node("player/ui/shadow_bar/bar").get_scale().x - 0.0031
+		var light_length = get_node("player/ui/shadow_bar/bar").get_scale().x - 0.00318
 		if opc < 0.85:
 			get_node("player/ui/shadow_bar/bar").set_scale(Vector2(light_length, 0.21))
 			get_node("player/shadow_overlay").set_opacity(opc)
