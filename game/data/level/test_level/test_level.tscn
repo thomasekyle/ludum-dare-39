@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://data/level/level_parts/still_platform/still_platform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://data/player/player.tscn" type="PackedScene" id=2]
+
+[node name="test_level" type="Node2D"]
+
+[node name="still_platform" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 65.2618, 454.976 )
+transform/scale = Vector2( 4.11224, 1 )
+
+[node name="still_platform1" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 218.42, 461.976 )
+transform/scale = Vector2( 4.11224, 1 )
+
+[node name="still_platform2" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 536.577, 409.131 )
+transform/scale = Vector2( 4.11224, 1 )
+
+[node name="still_platform3" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 379.175, 425.286 )
+transform/scale = Vector2( 4.11224, 1 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 110.532, 170.069 )
+
+
