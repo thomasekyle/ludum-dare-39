@@ -1,57 +1,39 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://data/level/test_level/test_level.gd" type="Script" id=1]
-[ext_resource path="res://data/player/player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://data/level/level_parts/checkpoint/checkpoint.tscn" type="PackedScene" id=3]
+[ext_resource path="res://data/level/level_parts/checkpoint/checkpoint.tscn" type="PackedScene" id=2]
+[ext_resource path="res://data/enemy/ghost.tscn" type="PackedScene" id=3]
 [ext_resource path="res://data/level/level_parts/still_platform/still_platform.tscn" type="PackedScene" id=4]
 [ext_resource path="res://data/level/level_parts/moving_platform/moving_platform.tscn" type="PackedScene" id=5]
+[ext_resource path="res://data/player/player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://data/ui/ui.tscn" type="PackedScene" id=7]
 
 [node name="test_level" type="Node2D"]
 
 script/script = ExtResource( 1 )
 
-[node name="player" parent="." instance=ExtResource( 2 )]
-
-transform/pos = Vector2( 66.1547, 405.509 )
-
-[node name="Camera2D" type="Camera2D" parent="player"]
-
-visibility/behind_parent = true
-transform/pos = Vector2( 14.1658, 7.18304 )
-anchor_mode = 1
-rotating = false
-current = true
-zoom = Vector2( 1, 1 )
-limit/left = -10000000
-limit/top = -10000000
-limit/right = 10000000
-limit/bottom = 10000000
-drag_margin/h_enabled = true
-drag_margin/v_enabled = true
-smoothing/enable = false
-smoothing/speed = 5.0
-drag_margin/left = 0.2
-drag_margin/top = 0.2
-drag_margin/right = 0.2
-drag_margin/bottom = 0.2
-
 [node name="Checkpoints" type="Node" parent="."]
 
 editor/display_folded = true
 
-[node name="checkpoint1" parent="Checkpoints" instance=ExtResource( 3 )]
+[node name="checkpoint1" parent="Checkpoints" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 392.161, 397.919 )
 transform/scale = Vector2( 2.53443, 2.32571 )
 checkpoint_num = 1
 
-[node name="checkpoint2" parent="Checkpoints" instance=ExtResource( 3 )]
+[node name="checkpoint2" parent="Checkpoints" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 719.277, 364.184 )
 transform/scale = Vector2( 2.53443, 2.32571 )
 checkpoint_num = 2
 
 [node name="Enemies" type="Node" parent="."]
+
+[node name="ghost" parent="Enemies" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 77.3084, 150.727 )
+transform/scale = Vector2( 2.55126, 2.54698 )
 
 [node name="Platforms" type="Node" parent="."]
 
@@ -96,6 +78,36 @@ vert_m = true
 vert_range = 300
 
 [node name="Misc" type="Node" parent="."]
+
+[node name="player" parent="." instance=ExtResource( 6 )]
+
+editor/display_folded = true
+transform/pos = Vector2( 66.1547, 405.509 )
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 17.4768, 16.5259 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+
+[node name="ui" parent="player" instance=ExtResource( 7 )]
+
+transform/pos = Vector2( -297.293, -217.124 )
 
 [connection signal="area_enter" from="Checkpoints/checkpoint1" to="." method="_on_a2d_checkpoint_area_enter"]
 

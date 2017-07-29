@@ -42,13 +42,16 @@ func _process(delta):
 		direction = input_direction
 	
 	if Input.is_action_pressed("ui_left"):
+		get_node("anim_player").set_animation("moving")
 		get_node("anim_player").set_flip_h(true)
 		input_direction = -1
 	elif Input.is_action_pressed("ui_right"):
+		get_node("anim_player").set_animation("moving")
 		get_node("anim_player").set_flip_h(false)
 		input_direction = 1
 	else:
 		input_direction = 0
+		get_node("anim_player").set_animation("default")
 	
 	if input_direction !=  direction:
 		speed_x /= 3
@@ -61,6 +64,9 @@ func _process(delta):
 		
 	#Add Gravity
 	speed_y += grav * delta
+	if jumps < 2:
+		get_node("anim_player").set_animation("jumping")
+	
 	
 	velocity.x = speed_x * delta * direction
 	velocity.y = speed_y * delta
@@ -78,8 +84,6 @@ func _process(delta):
 		speed_y = 0
 		var obj = get_collider()
 		var add_vel = get_col_vel(obj)
-		print(get_collider_velocity())
-		print(add_vel)
 		if moving:
 			move(slide)
 		else:
@@ -92,8 +96,6 @@ func get_col_vel(o):
 	var cols = get_parent().get_node("Platforms").get_children()
 	for i in cols:
 		if (i.get_instance_ID() == o.get_instance_ID()):
-			print(true)
-			print (i.get_velocity())
 			return i.get_velocity()
 			
 			
