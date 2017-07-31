@@ -1,0 +1,140 @@
+[gd_scene load_steps=83 format=1]
+
+[ext_resource path="res://data/scenes/scene_default.gd" type="Script" id=1]
+[ext_resource path="res://data/overlays/shadow.png" type="Texture" id=2]
+[ext_resource path="res://data/scenes/scene_4/close16.png" type="Texture" id=3]
+[ext_resource path="res://data/scenes/scene_4/close17.png" type="Texture" id=4]
+[ext_resource path="res://data/scenes/scene_4/close18.png" type="Texture" id=5]
+[ext_resource path="res://data/scenes/scene_4/close19.png" type="Texture" id=6]
+[ext_resource path="res://data/scenes/scene_4/close20.png" type="Texture" id=7]
+[ext_resource path="res://data/scenes/scene_4/close21.png" type="Texture" id=8]
+[ext_resource path="res://data/scenes/scene_4/close22.png" type="Texture" id=9]
+[ext_resource path="res://data/scenes/scene_4/close23.png" type="Texture" id=10]
+[ext_resource path="res://data/scenes/scene_4/close24.png" type="Texture" id=11]
+[ext_resource path="res://data/scenes/scene_4/close25.png" type="Texture" id=12]
+[ext_resource path="res://data/scenes/scene_4/close26.png" type="Texture" id=13]
+[ext_resource path="res://data/scenes/scene_4/close27.png" type="Texture" id=14]
+[ext_resource path="res://data/scenes/scene_4/close28.png" type="Texture" id=15]
+[ext_resource path="res://data/scenes/scene_4/close29.png" type="Texture" id=16]
+[ext_resource path="res://data/scenes/scene_4/close30.png" type="Texture" id=17]
+[ext_resource path="res://data/scenes/scene_4/close31.png" type="Texture" id=18]
+[ext_resource path="res://data/scenes/scene_4/close32.png" type="Texture" id=19]
+[ext_resource path="res://data/scenes/scene_4/close33.png" type="Texture" id=20]
+[ext_resource path="res://data/scenes/scene_4/close36.png" type="Texture" id=21]
+[ext_resource path="res://data/scenes/scene_4/close37.png" type="Texture" id=22]
+[ext_resource path="res://data/scenes/scene_4/close38.png" type="Texture" id=23]
+[ext_resource path="res://data/scenes/scene_4/close39.png" type="Texture" id=24]
+[ext_resource path="res://data/scenes/scene_4/close40.png" type="Texture" id=25]
+[ext_resource path="res://data/scenes/scene_4/close41.png" type="Texture" id=26]
+[ext_resource path="res://data/scenes/scene_4/close42.png" type="Texture" id=27]
+[ext_resource path="res://data/scenes/scene_4/close43.png" type="Texture" id=28]
+[ext_resource path="res://data/scenes/scene_4/close44.png" type="Texture" id=29]
+[ext_resource path="res://data/scenes/scene_4/close45.png" type="Texture" id=30]
+[ext_resource path="res://data/scenes/scene_4/close46.png" type="Texture" id=31]
+[ext_resource path="res://data/scenes/scene_4/close47.png" type="Texture" id=32]
+[ext_resource path="res://data/scenes/scene_4/close48.png" type="Texture" id=33]
+[ext_resource path="res://data/scenes/scene_4/close49.png" type="Texture" id=34]
+[ext_resource path="res://data/scenes/scene_4/close50.png" type="Texture" id=35]
+[ext_resource path="res://data/scenes/scene_4/close51.png" type="Texture" id=36]
+[ext_resource path="res://data/scenes/scene_4/close52.png" type="Texture" id=37]
+[ext_resource path="res://data/scenes/scene_4/close53.png" type="Texture" id=38]
+[ext_resource path="res://data/scenes/scene_4/close54.png" type="Texture" id=39]
+[ext_resource path="res://data/scenes/scene_4/close55.png" type="Texture" id=40]
+[ext_resource path="res://data/scenes/scene_4/close56.png" type="Texture" id=41]
+[ext_resource path="res://data/scenes/scene_4/close34.png" type="Texture" id=42]
+[ext_resource path="res://data/scenes/scene_4/close35.png" type="Texture" id=43]
+[ext_resource path="res://data/scenes/scene_4/close57.png" type="Texture" id=44]
+[ext_resource path="res://data/scenes/scene_4/close58.png" type="Texture" id=45]
+[ext_resource path="res://data/scenes/scene_4/close59.png" type="Texture" id=46]
+[ext_resource path="res://data/scenes/scene_4/close60.png" type="Texture" id=47]
+[ext_resource path="res://data/scenes/scene_4/close61.png" type="Texture" id=48]
+[ext_resource path="res://data/scenes/scene_4/close62.png" type="Texture" id=49]
+[ext_resource path="res://data/scenes/scene_4/close63.png" type="Texture" id=50]
+[ext_resource path="res://data/scenes/scene_4/close64.png" type="Texture" id=51]
+[ext_resource path="res://data/scenes/scene_4/close65.png" type="Texture" id=52]
+[ext_resource path="res://data/scenes/scene_4/close66.png" type="Texture" id=53]
+[ext_resource path="res://data/scenes/scene_4/close67.png" type="Texture" id=54]
+[ext_resource path="res://data/scenes/scene_4/close68.png" type="Texture" id=55]
+[ext_resource path="res://data/scenes/scene_4/close69.png" type="Texture" id=56]
+[ext_resource path="res://data/scenes/scene_4/close70.png" type="Texture" id=57]
+[ext_resource path="res://data/scenes/scene_4/close71.png" type="Texture" id=58]
+[ext_resource path="res://data/scenes/scene_4/close72.png" type="Texture" id=59]
+[ext_resource path="res://data/scenes/scene_4/close73.png" type="Texture" id=60]
+[ext_resource path="res://data/scenes/scene_4/close74.png" type="Texture" id=61]
+[ext_resource path="res://data/scenes/scene_4/close75.png" type="Texture" id=62]
+[ext_resource path="res://data/scenes/scene_4/close76.png" type="Texture" id=63]
+[ext_resource path="res://data/scenes/scene_4/close77.png" type="Texture" id=64]
+[ext_resource path="res://data/scenes/scene_4/close78.png" type="Texture" id=65]
+[ext_resource path="res://data/scenes/scene_4/close79.png" type="Texture" id=66]
+[ext_resource path="res://data/scenes/scene_4/close80.png" type="Texture" id=67]
+[ext_resource path="res://data/scenes/scene_4/close1.png" type="Texture" id=68]
+[ext_resource path="res://data/scenes/scene_4/close2.png" type="Texture" id=69]
+[ext_resource path="res://data/scenes/scene_4/close3.png" type="Texture" id=70]
+[ext_resource path="res://data/scenes/scene_4/close4.png" type="Texture" id=71]
+[ext_resource path="res://data/scenes/scene_4/close5.png" type="Texture" id=72]
+[ext_resource path="res://data/scenes/scene_4/close6.png" type="Texture" id=73]
+[ext_resource path="res://data/scenes/scene_4/close7.png" type="Texture" id=74]
+[ext_resource path="res://data/scenes/scene_4/close8.png" type="Texture" id=75]
+[ext_resource path="res://data/scenes/scene_4/close10.png" type="Texture" id=76]
+[ext_resource path="res://data/scenes/scene_4/close11.png" type="Texture" id=77]
+[ext_resource path="res://data/scenes/scene_4/close12.png" type="Texture" id=78]
+[ext_resource path="res://data/scenes/scene_4/close13.png" type="Texture" id=79]
+[ext_resource path="res://data/scenes/scene_4/close14.png" type="Texture" id=80]
+[ext_resource path="res://data/scenes/scene_4/close15.png" type="Texture" id=81]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"loop": false,
+"name": "part2",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ) ],
+"loop": false,
+"name": "part4",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 42 ), ExtResource( 43 ) ],
+"loop": false,
+"name": "part3",
+"speed": 0.5
+}, {
+"frames": [ ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ) ],
+"loop": false,
+"name": "part5",
+"speed": 0.5
+}, {
+"frames": [ ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ) ],
+"loop": false,
+"name": "part6",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ) ],
+"loop": false,
+"name": "part1",
+"speed": 0.5
+} ]
+
+[node name="scene_4" type="Node2D"]
+
+script/script = ExtResource( 1 )
+scene_num = 4
+scene_auto = false
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( 335.58, 250.973 )
+transform/scale = Vector2( 4.3558, 4.3463 )
+texture = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+
+transform/pos = Vector2( 319.424, 239.948 )
+transform/scale = Vector2( 2, 2 )
+frames = SubResource( 1 )
+animation = "part6"
+frame = 16
+playing = true
+
+

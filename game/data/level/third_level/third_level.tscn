@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=1]
+[gd_scene load_steps=15 format=1]
 
 [ext_resource path="res://data/level/test_level/test_level.gd" type="Script" id=1]
 [ext_resource path="res://data/overlays/shadow.png" type="Texture" id=2]
@@ -11,10 +11,18 @@
 [ext_resource path="res://data/level/level_parts/dark_pit/dark_pit_bottom.tscn" type="PackedScene" id=9]
 [ext_resource path="res://data/level/level_parts/spring/spring.tscn" type="PackedScene" id=10]
 [ext_resource path="res://data/level/level_parts/door/door.tscn" type="PackedScene" id=11]
+[ext_resource path="res://data/fnt/retro_nrm.fnt" type="BitmapFont" id=12]
+[ext_resource path="res://data/fnt/retro_door.fnt" type="BitmapFont" id=13]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
 
 [node name="test_level" type="Node2D"]
 
 script/script = ExtResource( 1 )
+level_num = 3
 
 [node name="Misc" type="Node" parent="."]
 
@@ -27,7 +35,7 @@ visibility/opacity = 0.2
 [node name="bg" type="Sprite" parent="tileset"]
 
 visibility/opacity = 0.9
-transform/pos = Vector2( 4251.3, 955.942 )
+transform/pos = Vector2( 4233.81, 971.38 )
 transform/scale = Vector2( 80, 20.1792 )
 texture = ExtResource( 2 )
 
@@ -464,6 +472,328 @@ transform/pos = Vector2( 6609.02, 460.383 )
 
 transform/pos = Vector2( 8625.04, 330.917 )
 
+[node name="Label" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 4690.0
+margin/top = 754.0
+margin/right = 4722.0
+margin/bottom = 770.0
+custom_fonts/font = ExtResource( 12 )
+text = "II"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label3" type="Label" parent="."]
+
+rect/rotation = -28.42
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 4744.0
+margin/top = 767.0
+margin/right = 4776.0
+margin/bottom = 783.0
+custom_fonts/font = ExtResource( 12 )
+text = "->"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label4" type="Label" parent="."]
+
+rect/rotation = -284.21
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 4816.0
+margin/top = 777.0
+margin/right = 4848.0
+margin/bottom = 793.0
+custom_fonts/font = ExtResource( 12 )
+text = "->"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label1" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 4789.0
+margin/top = 794.0
+margin/right = 4821.0
+margin/bottom = 810.0
+custom_fonts/font = ExtResource( 12 )
+text = "IV"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label5" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 4858.0
+margin/top = 850.0
+margin/right = 4868.0
+margin/bottom = 862.0
+custom_fonts/font = ExtResource( 13 )
+text = "I"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label6" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 4982.0
+margin/top = 849.0
+margin/right = 5002.0
+margin/bottom = 861.0
+custom_fonts/font = ExtResource( 13 )
+text = "II"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label7" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 5803.0
+margin/top = 571.0
+margin/right = 5813.0
+margin/bottom = 583.0
+custom_fonts/font = ExtResource( 13 )
+text = "I"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label12" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 7520.0
+margin/top = 652.0
+margin/right = 7590.0
+margin/bottom = 664.0
+custom_fonts/font = ExtResource( 13 )
+text = "XII-IX"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label13" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 7596.0
+margin/top = 557.0
+margin/right = 7666.0
+margin/bottom = 569.0
+custom_fonts/font = ExtResource( 13 )
+text = "V-II"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label14" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 7500.0
+margin/top = 557.0
+margin/right = 7512.0
+margin/bottom = 569.0
+custom_fonts/font = ExtResource( 13 )
+text = "X"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label15" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 8288.0
+margin/top = 377.0
+margin/right = 8328.0
+margin/bottom = 389.0
+custom_fonts/font = ExtResource( 13 )
+text = "XVII"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label16" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 8403.0
+margin/top = 376.0
+margin/right = 8423.0
+margin/bottom = 388.0
+custom_fonts/font = ExtResource( 13 )
+text = "IX"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label19" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 8605.0
+margin/top = 271.0
+margin/right = 8645.0
+margin/bottom = 283.0
+custom_fonts/font = ExtResource( 13 )
+text = "VIII"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label17" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 8509.0
+margin/top = 603.0
+margin/right = 8549.0
+margin/bottom = 615.0
+custom_fonts/font = ExtResource( 13 )
+text = "XIII"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label18" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 8640.0
+margin/top = 606.0
+margin/right = 8680.0
+margin/bottom = 618.0
+custom_fonts/font = ExtResource( 13 )
+text = "VII"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label9" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 6813.0
+margin/top = 236.0
+margin/right = 6824.0
+margin/bottom = 248.0
+custom_fonts/font = ExtResource( 13 )
+text = "V"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label10" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 6463.0
+margin/top = 397.0
+margin/right = 6493.0
+margin/bottom = 409.0
+custom_fonts/font = ExtResource( 13 )
+text = "III"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label2" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 4794.0
+margin/top = 713.0
+margin/right = 4906.0
+margin/bottom = 729.0
+custom_fonts/font = ExtResource( 12 )
+text = "XVII-IX"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="exit" type="Area2D" parent="."]
+
+transform/pos = Vector2( 11171.6, 1120.65 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 6.13886, 0, 0, 13.4682, 35.6934, 12.7645 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exit"]
+
+transform/pos = Vector2( 35.6934, 12.7645 )
+transform/scale = Vector2( 6.13886, 13.4682 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="spring 2" parent="." instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 11210.1, 1074.27 )
+transform/rot = 90.0
+transform/scale = Vector2( 4, 4 )
+
+[node name="spring3" parent="." instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 11210.1, 1157.78 )
+transform/rot = 90.0
+transform/scale = Vector2( 4, 4 )
+
 [connection signal="body_enter" from="good_doors/door12" to="." method="_on_door12_body_enter"]
 
 [connection signal="body_exit" from="good_doors/door12" to="." method="_on_door12_body_exit"]
@@ -475,5 +805,7 @@ transform/pos = Vector2( 8625.04, 330.917 )
 [connection signal="body_enter" from="good_doors/door14" to="." method="_on_door14_body_enter"]
 
 [connection signal="body_exit" from="good_doors/door14" to="." method="_on_door14_body_exit"]
+
+[connection signal="body_enter" from="exit" to="." method="_on_exit_body_enter"]
 
 

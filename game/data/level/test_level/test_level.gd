@@ -3,6 +3,7 @@ extends Node2D
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
+export var level_num = 0
 var spawn_point
 var check_point = 0
 var shadow_timer = 0
@@ -269,3 +270,19 @@ func _on_door13_body_exit( body ):
 func _on_door14_body_exit( body ):
 	if (get_node("player").get_instance_ID() == body.get_instance_ID()):
 		good_door3 = false
+
+
+func _on_exit_body_enter( body ):
+	if (get_node("player").get_instance_ID() == body.get_instance_ID()):
+		if (level_num == 1):
+			get_tree().change_scene("res://data/scenes/scene_2/scene_2.tscn")
+		if (level_num == 2):
+			get_tree().change_scene("res://data/scenes/scene_3/scene_3.tscn")
+		if (level_num == 3):
+			get_tree().change_scene("res://data/scenes/scene_4/scene_4.tscn")
+		
+		
+		
+		
+		
+

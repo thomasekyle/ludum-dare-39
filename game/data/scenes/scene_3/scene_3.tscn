@@ -1,0 +1,64 @@
+[gd_scene load_steps=32 format=1]
+
+[ext_resource path="res://data/scenes/scene_default.gd" type="Script" id=1]
+[ext_resource path="res://data/overlays/shadow.png" type="Texture" id=2]
+[ext_resource path="res://data/scenes/scene_3/cuttwo1.png" type="Texture" id=3]
+[ext_resource path="res://data/scenes/scene_3/cuttwo2.png" type="Texture" id=4]
+[ext_resource path="res://data/scenes/scene_3/cuttwo3.png" type="Texture" id=5]
+[ext_resource path="res://data/scenes/scene_3/cuttwo4.png" type="Texture" id=6]
+[ext_resource path="res://data/scenes/scene_3/cuttwo5.png" type="Texture" id=7]
+[ext_resource path="res://data/scenes/scene_3/cuttwo6.png" type="Texture" id=8]
+[ext_resource path="res://data/scenes/scene_3/cuttwo7.png" type="Texture" id=9]
+[ext_resource path="res://data/scenes/scene_3/cuttwo8.png" type="Texture" id=10]
+[ext_resource path="res://data/scenes/scene_3/cuttwo9.png" type="Texture" id=11]
+[ext_resource path="res://data/scenes/scene_3/cuttwo10.png" type="Texture" id=12]
+[ext_resource path="res://data/scenes/scene_3/cuttwo11.png" type="Texture" id=13]
+[ext_resource path="res://data/scenes/scene_3/cuttwo12.png" type="Texture" id=14]
+[ext_resource path="res://data/scenes/scene_3/cuttwo13.png" type="Texture" id=15]
+[ext_resource path="res://data/scenes/scene_3/cuttwo14.png" type="Texture" id=16]
+[ext_resource path="res://data/scenes/scene_3/cuttwo15.png" type="Texture" id=17]
+[ext_resource path="res://data/scenes/scene_3/cuttwo16.png" type="Texture" id=18]
+[ext_resource path="res://data/scenes/scene_3/cuttwo17.png" type="Texture" id=19]
+[ext_resource path="res://data/scenes/scene_3/cuttwo18.png" type="Texture" id=20]
+[ext_resource path="res://data/scenes/scene_3/cuttwo19.png" type="Texture" id=21]
+[ext_resource path="res://data/scenes/scene_3/cuttwo20.png" type="Texture" id=22]
+[ext_resource path="res://data/scenes/scene_3/cuttwo21.png" type="Texture" id=23]
+[ext_resource path="res://data/scenes/scene_3/cuttwo22.png" type="Texture" id=24]
+[ext_resource path="res://data/scenes/scene_3/cuttwo23.png" type="Texture" id=25]
+[ext_resource path="res://data/scenes/scene_3/cuttwo24.png" type="Texture" id=26]
+[ext_resource path="res://data/scenes/scene_3/cuttwo25.png" type="Texture" id=27]
+[ext_resource path="res://data/scenes/scene_3/cuttwo26.png" type="Texture" id=28]
+[ext_resource path="res://data/scenes/scene_3/cuttwo27.png" type="Texture" id=29]
+[ext_resource path="res://data/scenes/scene_3/cuttwo28.png" type="Texture" id=30]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ],
+"loop": false,
+"name": "default",
+"speed": 3.0
+} ]
+
+[node name="scene_3" type="Node2D"]
+
+script/script = ExtResource( 1 )
+scene_num = 3
+scene_auto = false
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( 335.58, 250.973 )
+transform/scale = Vector2( 4.3558, 4.3463 )
+texture = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+
+transform/pos = Vector2( 319.424, 239.948 )
+transform/scale = Vector2( 2, 2 )
+frames = SubResource( 1 )
+animation = "default"
+frame = 27
+playing = true
+
+

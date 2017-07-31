@@ -5,7 +5,7 @@ extends Node
 # var b = "textvar"
 var spawn_point = Vector2(0,0)
 var checkpoint = 0
-var difficulty = 0
+var difficulty = 1
 
 func _ready():
 	# Called every time the node is added to the scene.
