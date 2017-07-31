@@ -27,6 +27,7 @@ func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
 	spawn_point = get_node("player").get_pos()
+	System.set_spawn_point(spawn_point)
 	GLOBAL_BAR_POS = get_node("player/ui/shadow_bar/bar").get_pos()
 	get_node("StreamPlayer").set_volume(0.0)
 	set_process(true)
@@ -42,6 +43,11 @@ func _ready():
 	for i in get_node("doors").get_children():
 		i.connect("body_enter", self,"_fake_door_enter")
 		i.connect("body_exit", self,"_fake_door_exit")
+	pass
+	for i in get_node("Checkpoints").get_children():
+		i.connect("body_enter", self,"_checkpoint_enter")
+		i.connect("body_enter_shape", self,"_checkpoint_clear")
+		print("yes")
 	pass
 	
 func _process(delta):
@@ -92,7 +98,9 @@ func _process(delta):
 				get_node("StreamPlayer").seek_pos(s_pos)
 				get_node("StreamPlayer").play()
 			get_node("StreamPlayer").set_volume(vol)
-		var light_length = get_node("player/ui/shadow_bar/bar").get_scale().x - 0.00228
+		var light_length = get_node("player/ui/shadow_bar/bar").get_scale().x - 0.00328
+		if (light_length < 0):
+				light_length = 0
 		if opc < 0.95:
 			get_node("player/ui/shadow_bar/bar").set_scale(Vector2(light_length, 0.21))
 			get_node("player/shadow_overlay").set_opacity(opc)
@@ -134,12 +142,10 @@ func _end_game(body):
 	pass
 
 func _fake_door_exit(body): 
-	print("exit")
 	if (get_node("player").get_instance_ID() == body.get_instance_ID()):
 		fake_door = false
 
 func _fake_door_enter(body):
-	print("enter") 
 	if (get_node("player").get_instance_ID() == body.get_instance_ID()):
 		fake_door = true
 
@@ -151,7 +157,7 @@ func _spring(body):
 
 func _respawn(body):
 	if (get_node("player").get_instance_ID() == body.get_instance_ID()):
-		get_node("player").set_pos(spawn_point)
+		get_node("player").set_pos(System.spawn_point)
 		if (get_node("player").i_timer <= 0.1):
 			Sound.play("hit")
 			get_node("player").JUMP_FORCE = 200
@@ -170,6 +176,8 @@ func _lose_light(body):
 			var o = get_node("player/shadow_overlay").get_opacity() + 0.02
 			if o < 0.95:
 				var light_length = get_node("player/ui/shadow_bar/bar").get_scale().x - 0.00456
+				if (light_length < 0):
+					light_length = 0
 				get_node("player/ui/shadow_bar/bar").set_scale(Vector2(light_length, 0.21))
 				get_node("player/shadow_overlay").set_opacity(o)
 			vol = get_node("StreamPlayer").get_volume()
@@ -207,46 +215,30 @@ func _lose_light(body):
 				get_node("StreamPlayer").set_volume(vol)
 
 
-func _on_a2d_checkpoint_area_enter( area ):
-	pass # replace with function body
+func _checkpoint_enter(body):
+	print("enter")
+	if (get_node("player").get_instance_ID() == body.get_instance_ID()):
+		System.set_spawn_point(get_node("player").get_pos())
+		for i in get_node("Checkpoints").get_children():
+			if (i.check_area(body)):
+				if (System.difficulty == 2):
+					if (get_node("StreamPlayer").get_volume() > .48):
+						get_node("StreamPlayer").set_volume(0.48)
+					if (get_node("player/shadow_overlay").get_opacity() > .45):
+						get_node("player/shadow_overlay").set_opacity(0.45)
+					if (get_node("player/ui/shadow_bar/bar").get_scale().x < 0.13):
+						get_node("player/ui/shadow_bar/bar").set_scale(Vector2(0.13,0.21))
+				if (System.difficulty < 2):
+					get_node("StreamPlayer").set_volume(0)
+					get_node("player/shadow_overlay").set_opacity(0.1)
+					get_node("player/ui/shadow_bar/bar").set_scale(Vector2(0.26,0.21))
+				if (System.difficulty > 0):
+					i.queue_free()
+		
 
 
-func _on_a2d_checkpoint_body_enter( body ):
 	
-	if (check_point < get_node("Checkpoints/checkpoint1").checkpoint_num):
-		get_node("StreamPlayer").set_volume(0)
-		get_node("Checkpoints/checkpoint1/Particles2D1").hide()
-		get_node("Checkpoints/checkpoint1/Particles2D").hide()
-		get_node("player/shadow_overlay").set_opacity(0.1)
-		get_node("player/ui/shadow_bar/bar").set_scale(Vector2(0.26,0.21))
-		check_point = get_node("Checkpoints/checkpoint1").checkpoint_num
-		spawn_point = get_node("Checkpoints/checkpoint1").get_pos()
 
-
-func _on_a2d_checkpoint1_body_enter( body ):
-	
-	if (check_point < get_node("Checkpoints/checkpoint2").checkpoint_num):
-		get_node("StreamPlayer").set_volume(0)
-		get_node("Checkpoints/checkpoint2/Particles2D1").hide()
-		get_node("Checkpoints/checkpoint2/Particles2D").hide()
-		get_node("player/shadow_overlay").set_opacity(0.1)
-		get_node("player/ui/shadow_bar/bar").set_scale(Vector2(0.26,0.21))
-		check_point = get_node("Checkpoints/checkpoint2").checkpoint_num
-		spawn_point = get_node("Checkpoints/checkpoint2").get_pos()
-		
-		
-		
-
-
-func _on_checkpoint3_body_enter( body ):
-	if (check_point < get_node("Checkpoints/checkpoint3").checkpoint_num):
-		get_node("StreamPlayer").set_volume(0)
-		get_node("Checkpoints/checkpoint3/Particles2D1").hide()
-		get_node("Checkpoints/checkpoint3/Particles2D").hide()
-		get_node("player/shadow_overlay").set_opacity(0.1)
-		get_node("player/ui/shadow_bar/bar").set_scale(Vector2(0.26,0.21))
-		check_point = get_node("Checkpoints/checkpoint3").checkpoint_num
-		spawn_point = get_node("Checkpoints/checkpoint3").get_pos()
 
 
 func _on_door12_body_enter( body ):

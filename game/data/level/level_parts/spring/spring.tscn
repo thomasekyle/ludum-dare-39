@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://data/level/level_parts/darkness/darkness.gd" type="Script" id=1]
 [ext_resource path="res://data/level/level_parts/checkpoint/particle-circle.png" type="Texture" id=2]
@@ -7,13 +7,6 @@
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
-
-[sub_resource type="Curve2D" id=2]
-
-bake_interval = 5.0
-_data = {
-"points": Vector2Array(  )
-}
 
 [node name="spring" type="Area2D"]
 
@@ -105,20 +98,6 @@ params/final_size = 3.0
 params/hue_variation = 0.0
 params/anim_speed_scale = 1.0
 params/anim_initial_pos = 0.0
-
-[node name="Path2D" type="Path2D" parent="."]
-
-curve = SubResource( 2 )
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-
-offset = 0.0
-h_offset = 0.0
-v_offset = 0.0
-rotate = true
-cubic_interp = true
-loop = true
-lookahead = 4.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
