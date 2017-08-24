@@ -2,8 +2,8 @@
 
 [ext_resource path="res://data/scenes/title_screen.gd" type="Script" id=1]
 [ext_resource path="res://data/scenes/title.png" type="Texture" id=2]
-[ext_resource path="res://data/fnt/retro_nrm.fnt" type="BitmapFont" id=3]
-[ext_resource path="res://data/fnt/retro_title.fnt" type="BitmapFont" id=4]
+[ext_resource path="res://data/fnt/retro_title.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://data/fnt/retro_nrm.fnt" type="BitmapFont" id=4]
 
 [node name="title_screen" type="Node2D"]
 
@@ -17,6 +17,24 @@ texture = ExtResource( 2 )
 
 [node name="start" type="Node2D" parent="."]
 
+[node name="title" type="Label" parent="start"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 641.0
+margin/bottom = 115.0
+custom_fonts/font = ExtResource( 3 )
+text = "Night Light"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
 [node name="start" type="Button" parent="start"]
 
 focus/ignore_mouse = false
@@ -27,7 +45,7 @@ margin/left = 233.0
 margin/top = 128.0
 margin/right = 405.0
 margin/bottom = 155.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -44,7 +62,7 @@ margin/left = 234.0
 margin/top = 191.0
 margin/right = 406.0
 margin/bottom = 219.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -61,30 +79,12 @@ margin/left = 232.0
 margin/top = 159.0
 margin/right = 406.0
 margin/bottom = 187.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Credits"
 flat = false
-
-[node name="title" type="Label" parent="start"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 641.0
-margin/bottom = 115.0
-custom_fonts/font = ExtResource( 4 )
-text = "Night Light"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
 [node name="credits" type="Node2D" parent="."]
 
@@ -100,7 +100,7 @@ margin/left = 233.0
 margin/top = 412.0
 margin/right = 405.0
 margin/bottom = 439.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -129,7 +129,7 @@ margin/left = 37.0
 margin/top = 29.0
 margin/right = 306.0
 margin/bottom = 399.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 text = "Story:
 Kyle Thomas
 Elizabeth Beaver
@@ -155,7 +155,7 @@ margin/left = 317.0
 margin/top = 30.0
 margin/right = 845.0
 margin/bottom = 400.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 text = "Music&Sounds:
 Pizzamakesgames
 Kyle Thomas
@@ -181,7 +181,7 @@ margin/left = 13.0
 margin/top = 286.0
 margin/right = 541.0
 margin/bottom = 656.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 text = "Made with <3
 and the Godot Engine"
 align = 1
@@ -203,11 +203,11 @@ margin/left = 236.0
 margin/top = 81.0
 margin/right = 408.0
 margin/bottom = 108.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Easy"
+text = "Normal"
 flat = false
 
 [node name="normal" type="Button" parent="difficulty"]
@@ -220,11 +220,11 @@ margin/left = 236.0
 margin/top = 113.0
 margin/right = 408.0
 margin/bottom = 140.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Normal"
+text = "Hard"
 flat = false
 
 [node name="nightmare" type="Button" parent="difficulty"]
@@ -237,7 +237,7 @@ margin/left = 235.0
 margin/top = 146.0
 margin/right = 407.0
 margin/bottom = 173.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -254,7 +254,7 @@ margin/left = 237.0
 margin/top = 192.0
 margin/right = 409.0
 margin/bottom = 219.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -271,7 +271,7 @@ margin/left = 1.0
 margin/top = 2.0
 margin/right = 642.0
 margin/bottom = 68.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 text = "For everyone"
 autowrap = true
 percent_visible = 1.0

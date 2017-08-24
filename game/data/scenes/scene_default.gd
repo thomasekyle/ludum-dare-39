@@ -40,7 +40,7 @@ func _process(delta):
 			get_node("AnimatedSprite").set_animation("part3")
 			get_node("AnimatedSprite").set_frame(0)
 			
-		if (get_node("AnimatedSprite").get_animation() == "part3" and get_node("AnimatedSprite").get_frame() == 11):
+		if (get_node("AnimatedSprite").get_animation() == "part3" and get_node("AnimatedSprite").get_frame() == 15):
 			var t = Timer.new()
 			t.set_wait_time(2)
 			t.set_one_shot(true)

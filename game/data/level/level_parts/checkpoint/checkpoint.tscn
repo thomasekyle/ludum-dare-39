@@ -82,7 +82,6 @@ params/anim_initial_pos = 0.0
 
 [node name="Sprite" type="Sprite" parent="."]
 
-z/z = 6
 texture = ExtResource( 3 )
 
 

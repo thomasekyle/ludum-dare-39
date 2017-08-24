@@ -53,11 +53,11 @@ func _on_nightmare_pressed():
 
 
 func _on_easy_mouse_enter():
-	get_node("difficulty/dif").set_text("For the casual gamer. Not very difficult.")
+	get_node("difficulty/dif").set_text("Challenging, but not impossible.")
 
 
 func _on_normal_mouse_enter():
-	get_node("difficulty/dif").set_text("A good challenge. The way the game was meant to be played.")
+	get_node("difficulty/dif").set_text("Very challenging. The way the game was meant to be played.")
 
 
 func _on_nightmare_mouse_enter():

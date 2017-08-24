@@ -117,12 +117,12 @@ func _process(delta):
 			ghost_timer = 0
 			var ghost = en.instance()
 			ghost.connect("body_enter", self,"_end_game")
-			add_child(ghost)
+			get_node("Enemies").add_child(ghost)
 			ghost.attack(get_node("player").get_pos())
 		if midnight == false:
 			ghost_timer = 0
 			var ghost = en.instance()
-			add_child(ghost)
+			get_node("Enemies").add_child(ghost)
 			ghost.scare (get_node("player").get_pos())
 	else:
 		ghost_timer += delta
@@ -152,6 +152,7 @@ func _fake_door_enter(body):
 
 func _spring(body):
 	if (get_node("player").get_instance_ID() == body.get_instance_ID()):
+		Sound.play("spring")
 		get_node("player").spring = true
 		get_node("player").jumps = 0
 		get_node("player").speed_y = -1200
@@ -220,6 +221,12 @@ func _checkpoint_enter(body):
 	print("enter")
 	if (get_node("player").get_instance_ID() == body.get_instance_ID()):
 		System.set_spawn_point(get_node("player").get_pos())
+		var f = preload("res://data/animations/flash.tscn")
+		var flash = f.instance()
+		get_node("player").add_child(flash)
+		if (get_node("Enemies").get_child_count() > 0):
+			for i in get_node("Enemies").get_children():
+				i.queue_free()
 		for i in get_node("Checkpoints").get_children():
 			if (i.check_area(body)):
 				if (System.difficulty == 2):

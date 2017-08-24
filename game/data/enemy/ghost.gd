@@ -19,7 +19,7 @@ func _ready():
 func _process(delta):
 	if (attack == true and timer < 1):
 		get_node("anim_ghost").set_animation("default")
-		var hero_pos = get_parent().get_node("player").get_pos()
+		var hero_pos = get_parent().get_parent().get_node("player").get_pos()
 		if hero_pos.x > get_pos().x:
 			x_dir = 1
 		else:

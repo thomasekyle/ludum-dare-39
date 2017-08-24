@@ -1,28 +1,63 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=10 format=1]
 
 [ext_resource path="res://data/audio/sfx/sfx_sounds_impact7.smp" type="Sample" id=1]
 [ext_resource path="res://data/audio/sfx/sfx_movement_jump8.smp" type="Sample" id=2]
-[ext_resource path="res://data/audio/sfx/sfx_movement_jump10_landing.smp" type="Sample" id=3]
+[ext_resource path="res://data/audio/sfx/sfx_sound_neutral5.smp" type="Sample" id=3]
+[ext_resource path="res://data/audio/sfx/sfx_movement_jump10_landing.smp" type="Sample" id=4]
+[ext_resource path="res://data/audio/sfx/sfx_sounds_interaction8.smp" type="Sample" id=5]
+[ext_resource path="res://data/audio/sfx/sfx_menu_select3.smp" type="Sample" id=6]
+[ext_resource path="res://data/audio/sfx/sfx_sound_noise.smp" type="Sample" id=7]
+[ext_resource path="res://data/audio/sfx/sfx_menu_select2.smp" type="Sample" id=8]
 
 [sub_resource type="SampleLibrary" id=1]
 
 samples/hit = {
-"db": 0.0,
+"db": -20.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 1 )
 }
 samples/jump = {
-"db": 0.0,
+"db": -20.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 2 )
 }
-samples/landing = {
-"db": 0.0,
+samples/jump2 = {
+"db": -10.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 3 )
+}
+samples/landing = {
+"db": -20.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 4 )
+}
+samples/light = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 5 )
+}
+samples/sfx_menu_select3 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 6 )
+}
+samples/sfx_sound_noise = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 7 )
+}
+samples/spring = {
+"db": -20.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 8 )
 }
 
 [node name="sfx" type="SamplePlayer"]

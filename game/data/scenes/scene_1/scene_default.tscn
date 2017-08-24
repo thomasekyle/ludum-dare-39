@@ -53,7 +53,7 @@ animations = [ {
 [node name="scene_1" type="Node2D"]
 
 script/script = ExtResource( 1 )
-scene_length = 0
+scene_num = 0
 scene_auto = false
 
 [node name="Sprite" type="Sprite" parent="."]
